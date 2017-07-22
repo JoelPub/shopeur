@@ -1,19 +1,3 @@
-在chrome运行：<br> 
-    npm install -g cordova<br> 
-    npm install -g ionic<br> 
-    npm install -g bower<br> 
-    npm install -g gulp<br> 
-    npm install -g grunt-cli<br> 
-    npm install -g ios-sim<br> 
-    npm install -g http-server<br> 
-    npm install -g karma-cli<br> 
-    npm install -g protractor<br> 
-    npm install -g jasmine<br> 
-    npm install && bower install <br>    
-    运行staging2环境：<br> 
-    拷贝env-staging-2.js到app/script/env.js<br> 
-    gulp<br> 
-chrome打开http://localhost:9000<br> 
 
 Shop-Europe / ionic-shopeur-app  
 ---------------
