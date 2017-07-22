@@ -1,0 +1,19 @@
+.qrcode-view {
+  .qrcode-item {
+    text-align: center;
+    qr {
+      margin: 0 auto 20px;
+    }
+  }
+  .item {
+    margin: 0;
+    .input-label {
+      text-transform: uppercase;
+    }
+    input[type="text"] {
+      text-align: right;
+      padding-right: 16px;
+      background-color: transparent;
+    }
+  }
+}

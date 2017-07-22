@@ -1,0 +1,7 @@
+.trip-view {
+  &.pane[hide-nav-bar="true"] {
+    .has-tabs-top {
+      top: 0;
+    }
+  }
+}

@@ -1,0 +1,194 @@
+* {
+  box-shadow: none !important;
+}
+
+ion-view[class*="-view"] {
+  img {
+    width: 100%;
+    height: auto;
+  }
+  .col {
+    margin-bottom: 0;
+  }
+
+}
+
+ion-header-bar {
+  .nav-bar-title {
+    img {
+      max-height: 20px;
+      margin-top: 12px;
+    }
+  }
+}
+
+ion-footer-bar {
+  &.bar-footer {
+    padding: 0;
+    i {
+      font-size: 36px;
+      line-height: 40px;
+      color: white;
+    }
+    .active {
+      background: lighten(#a2d1cb, 20);
+      i {
+        color: $gold;
+      }
+    }
+  }
+
+}
+
+button,
+ion-option-button {
+  &.button-gold {
+    background-color: $gold;
+  }
+  &.button-mint {
+    background-color: $mint;
+  }
+  &.button-red {
+    background-color: $red;
+  }
+}
+
+.gold {
+  color: $gold;
+}
+
+.base-button {
+  @extend .button,
+  .button-full,
+  .icon-right;
+}
+
+/*.scroll-content {
+  @extend .fade-in;
+}*/
+
+.toggle input:checked + .track {
+  border-color: darken($mint, 20%) !important;
+  background-color: $mint !important;
+}
+
+//.platform-android .action-sheet .action-sheet-title,
+.platform-android .action-sheet .button {
+  padding-left: 16px;
+}
+
+// CSS styles to eliminate the annoying flickering header when changing tabs in an Ionic app on Android:
+// http://forum.ionicframework.com/t/flickering-when-navigating-via-tabs-on-android/27281/2
+// https://forum.ionicframework.com/t/ionic-view-transition-flickering/27441/3
+.platform-android {
+  .header-item {
+    &.title,
+    &.buttons {
+      transition-duration: 0ms;
+    }
+  }
+}
+
+ion-option-button {
+  i {
+    font-size: 32px;
+    margin: 0 auto;
+  }
+}
+
+.bar-stable {
+  .button {
+    &.button.button-clear {
+      &.icon-shopeur-new-product {
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+.image-wrapper {
+  width: 100%;
+  min-height: 175px;
+  margin-top: 10px;
+  img {
+    width: 100%;
+    height: auto;
+  }
+  &.dummy {
+    background: url("../assets/images/dummypic.jpg") no-repeat top left / contain;
+  }
+}
+
+.view-title {
+  h1 {
+    text-transform: uppercase;
+  }
+}
+
+ion-view[class*="-view"] {
+  .header {
+    padding: 10px 0;
+    img {
+      margin: 0 auto;
+      display: block;
+      height: auto;
+      max-width: 80%;
+    }
+  }
+}
+
+.avatar-wrapper {
+  &.list:last-child.card {
+    margin-bottom: 0;
+  }
+  &.card {
+    margin: 0;
+    border-radius: 0;
+    .item:first-child,
+    .item:last-child {
+      border-radius: 0;
+    }
+    .item-avatar {
+      height: 150px;
+      padding: 16px;
+      background-image: url("../assets/images/avatar-bg.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      h2, h3 {
+        color: $formTextColor;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      h2 {
+        font-family: $font-family-light-sans-serif;
+      }
+      img {
+        max-width: 80px;
+        max-height: 80px;
+        position: relative;
+        top: initial;
+        left: initial;
+        margin: 0 auto;
+        display: block;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.progress {
+  .Progress-main {
+    background-color: red;
+    display: block;
+    width: 100%;
+    height: 0.3em;
+    margin-top: 0.75em;
+  }
+  .Progress-main::-webkit-progress-bar {
+    background: $grey;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) inset;
+  }
+  .Progress-main::-webkit-progress-value {
+    background: $mint;
+  }
+}

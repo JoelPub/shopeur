@@ -1,0 +1,77 @@
+<ion-view class="home-view">
+    <ion-content>
+
+        <div class="row" ui-sref="app.profile">
+            <div class="col">
+                <div class="avatar-wrapper list card">
+                    <div class="item item-avatar">
+                        <img ng-src="{{vm.avatar}}">
+                        <h2>{{vm.message}}</h2>
+                        <h3>{{vm.localeName}}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row buttons">
+            <div class="col col-50">
+                <button class="button button-full button-royal" ui-sref="app.product">
+                    <i class="shopeur-icon icon-shopeur-like-feature"></i>
+                    <p translate="home.add"></p>
+                </button>
+            </div>
+            <div class="col col-50">
+                <button class="button button-full button-gold" ng-click="vm.socialSharing()">
+                    <i class="shopeur-icon icon-shopeur-social-share"></i>
+                    <p translate="home.social"></p>
+                </button>
+            </div>
+        </div>
+
+        <div class="row" ng-if="vm.hasNotifications()">
+            <div class="col">
+                <ion-slide-box auto-play="true"
+                               slide-interval="3000"
+                               does-continue="true"
+                               show-pager="false"
+                               delegate-handle="notificationSlides"
+                               class="notification-slides">
+
+                    <ion-slide ng-repeat="notification in vm.notifications track by $index">
+                        <div class="slide" ng-click="vm.goToNotification(notification.type)">
+                            <p class="slide-text">
+                                <i class="marker"></i>
+                                <span ng-bind-html="notification.message"></span>
+                            </p>
+                        </div>
+                    </ion-slide>
+
+                </ion-slide-box>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <ion-slide-box auto-play="false"
+                               does-continue="false"
+                               show-pager="false"
+                               delegate-handle="storySlides"
+                               class="story-slides">
+
+                    <ion-slide ng-repeat="story in vm.stories track by story.id">
+                        <div class="slide" ng-click="vm.gotoStory(story)">
+                            <div class="slide-image">
+                                <img db-img doc-id="story.doc._id" attachment-id="story.doc.image_file">
+                            </div>
+                            <p class="slide-text">
+                                <span translations="story.doc.translations" field="headline"></span>
+                            </p>
+                        </div>
+                    </ion-slide>
+
+                </ion-slide-box>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

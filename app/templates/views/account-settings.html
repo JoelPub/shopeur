@@ -1,0 +1,35 @@
+<ion-view class="edit-account-view">
+    <ion-content>
+        <ion-list>
+
+            <ion-item class="item item-input">
+                <div class="input-label" translate="account-settings.email"></div>
+                <input type="text" ng-model="vm.form.email">
+            </ion-item>
+
+            <ion-item class="item item-input">
+                <div class="input-label" translate="account-settings.password"></div>
+                <input type="password" ng-model="vm.form.password1">
+            </ion-item>
+
+            <ion-item class="item item-input">
+                <div class="input-label" translate="account-settings.password-confirm"></div>
+                <input type="password" ng-model="vm.form.password2">
+            </ion-item>
+
+            <!--<li>
+                <button class="button button-full button-gold"
+                        translate="account-settings.new-password">
+                </button>
+            </li>-->
+
+            <ion-item class="item">
+                <button class="base-button button-positive shopeur-icon icon-shopeur-preordered-status"
+                        ng-click="vm.save()"
+                        translate="global.update">
+                </button>
+            </ion-item>
+
+        </ion-list>
+    </ion-content>
+</ion-view>

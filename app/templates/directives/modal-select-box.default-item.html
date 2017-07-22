@@ -1,0 +1,12 @@
+<ion-item ng-if="!vm.groupItemId"
+          ng-click="vm.selectItem(item)"
+          ng-repeat="item in vm.data | filter:vm.searchText track by item.id"
+          ng-class="{
+            'item': !vm.itemIcon && vm.showLabelInList,
+            'item item-icon': vm.itemIcon && !vm.showLabelInList,
+            'item item-thumbnail-left': vm.itemIcon && vm.showLabelInList
+          }">
+
+    <img class="brand-logo" db-img doc-id="vm.getObjectValue(item, vm.itemId)" attachment-id="vm.getObjectValue(item, vm.itemIcon)" ng-if="vm.itemIcon">
+    <label ng-bind-html="vm.getObjectValue(item, vm.itemLabel)" ng-if="vm.showLabelInList"></label>
+</ion-item>

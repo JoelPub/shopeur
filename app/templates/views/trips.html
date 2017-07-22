@@ -1,0 +1,56 @@
+<ion-view class="trips-view">
+    <ion-content>
+
+        <ion-list type="list-inset"
+                  show-delete="vm.showDelete"
+                  show-reorder="vm.showReorder"
+                  ng-repeat="group in vm.tripGroups track by group.title"
+                  ng-if="vm.tripGroups">
+
+            <ion-item class="item item-divider">
+                <b>{{group.title}}</b>
+            </ion-item>
+
+            <ion-item class="item item-thumbnail-left item-icon-right"
+                      ng-repeat="trip in group.trips track by trip.id"
+                      ng-click="vm.show(trip)">
+
+                <img db-img doc-id="trip.doc.destination.id"
+                     attachment-id="trip.doc.destination.value.image_file">
+
+                <h3>
+                    <span translations="trip.doc.country.value.translations" field="name"
+                          ng-if="trip.doc.country.value.translations"></span>
+                    <span> - </span>
+                    <span translations="trip.doc.city.value.translations" field="name"></span>
+                </h3>
+
+                <p translations="trip.doc.destination.value.translations" field="location"></p>
+
+                <p>{{trip.doc.startDate | date : 'shortDate'}} - {{trip.doc.endDate | date : 'shortDate'}}</p>
+
+                <ion-option-button class="button-gold"
+                                   ng-click="vm.edit(trip)">
+                    <i class="shopeur-icon icon-shopeur-edit-product"></i>
+                </ion-option-button>
+
+                <ion-option-button class="button-assertive"
+                                   ng-click="vm.delete(trip)">
+                    <i class="icon ion-ios-trash-outline"></i>
+                </ion-option-button>
+
+            </ion-item>
+        </ion-list>
+
+        <div class="row">
+            <div class="col">
+                <button class="base-button button-gold shopeur-icon icon-shopeur-new-product"
+                        ng-click="vm.newTrip()"
+                        translate="trips.newtrip"
+                        id="NewTripBtn">
+                </button>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

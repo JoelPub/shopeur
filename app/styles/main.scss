@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+/************************************
+ *
+ *  Main Styles to compile. Here only @imports!
+ *
+ ************************************/
+
+@import "ionic-styles";
+@import "fonts";
+@import "animations";
+
+/**
+ * LAYOUT
+ */
+@import "layout/layout";
+@import "layout/global";
+@import "layout/icons";
+@import "layout/forms";
+
+/**
+ * MENU
+ */
+@import "menu/menu";
+
+/**
+ * VIEWS
+ */
+@import "views/about";
+@import "views/contact";
+@import "views/login";
+@import "views/inspired";
+@import "views/signup";
+@import "views/welcome";
+@import "views/trip";
+@import "views/trips";
+@import "views/trip-detail";
+@import "views/product";
+@import "views/profile";
+@import "views/home";
+@import "views/story";
+@import "views/tax-refund";
+@import "views/wishlist";
+@import "views/qrcode";
+
+/**
+ * DIRECTIVES
+ */
+@import "directives/modal-select-directive";
+@import "directives/db-img-directive";

@@ -1,0 +1,140 @@
+<ion-view class="product-view">
+    <ion-content>
+
+        <div class="header">
+            <!-- Default image if no brand is selected -->
+            <img ng-src="{{vm.defaultImgSrc}}"
+                 ng-if="!vm.form.selectedBrand"
+                 ng-show="vm.defaultImgSrc">
+
+            <!-- Stored image from selected brand -->
+            <img ng-if="vm.form.selectedBrand"
+                 db-img doc-id="vm.form.selectedBrand._id"
+                 attachment-id="vm.form.selectedBrand.logo_file">
+        </div>
+
+        <ion-list>
+
+            <ion-item class="item item-input item-select">
+                <div class="input-label" translate="product.brand"></div>
+                <modal-select-box id="brandsSelect"
+                                  model="vm.form.selectedBrand"
+                                  model-change="vm.onBrandsChanged()"
+                                  modal-title="product.brand-select"
+                                  data="vm.brands"
+                                  item-label="translations.title"
+                                  item-icon="logo_file"
+                                  item-id="_id"
+                                  placeholder="..."
+                                  show-label-in-list="false">
+                </modal-select-box>
+            </ion-item>
+
+            <ion-item class="item" ng-if="vm.form.selectedBrand && (vm.trips.length > 0)">
+                <div class="input-label" translate="product.picture"></div>
+                <div class="row">
+                    <div class="col col-50">
+                        <div class="image-wrapper" ng-class="{'dummy': !vm.imageURI}" ng-click="vm.select()">
+                            <img ng-src="{{vm.imageURI}}" ng-if="vm.imageURI">
+                        </div>
+                    </div>
+
+                    <div class="col col-50">
+                        <button class="button button-full button-balanced"
+                                ng-click="vm.select()"
+                                translate="global.select">
+                        </button>
+                        <button class="button button-full button-gold"
+                                ng-click="vm.delete()"
+                                ng-if="vm.form.image"
+                                translate="global.delete">
+                        </button>
+                    </div>
+                </div>
+            </ion-item>
+
+            <div class="card"
+                 ng-if="vm.form.selectedBrand && (vm.trips.length == 1)">
+                <div class="item item-text-wrap gold">
+                    <small>
+                        <i class="icon ion-information-circled"></i> <span translate="product.product-trip-hint"></span>
+                        <br/><br/>
+                        <a ng-click="vm.createTrip()" class="base-button button button-energized">
+                            <span translate="product.product-trip-link"></span> <i class="icon shopeur-icon icon-shopeur-plane"></i>
+                        </a>
+                    </small>
+                </div>
+            </div>
+
+            <ion-item class="item item-input item-select" ng-show="vm.form.selectedBrand">
+                <div class="input-label" translate="product.category"></div>
+                <modal-select-box id="categoriesSelect"
+                                  model="vm.form.selectedCategory"
+                                  model-change="vm.onCategoriesChanged()"
+                                  modal-title="Select a category"
+                                  data="vm.categories"
+                                  item-label="doc.translations.title"
+                                  item-icon="doc.icon_file"
+                                  item-id="doc._id"
+                                  placeholder="..."
+                                  show-label-in-list="true">
+                </modal-select-box>
+            </ion-item>
+
+            <!--ion-item class="item item-input item-select" ng-show="vm.form.selectedCategory">
+                <div class="input-label" translate="product.color"></div>
+                <select ng-model="vm.form.selectedColor"
+                        ng-options="color.title for color in vm.colors track by color.title"
+                        ng-change="vm.onColorsChanged()">
+                    <option value="">...</option>
+                </select>
+            </ion-item-->
+
+            <ion-item class="item item-input" ng-show="vm.form.selectedBrand">
+                <div class="input-label" translate="product.product-code"></div>
+                <input type="text" ng-model="vm.form.productCode" id="productCode">
+            </ion-item>
+
+            <ion-item class="item item-input" ng-show="vm.form.selectedBrand">
+                <div class="input-label" translate="product.size"></div>
+                <input type="text" ng-model="vm.form.size" id="size">
+            </ion-item>
+
+            <ion-item class="item item-input item-select" ng-show="vm.form.selectedBrand">
+                <div class="input-label" translate="product.trip-list"></div>
+                <modal-select-box id="tripsSelect"
+                                  model="vm.form.selectedTrip"
+                                  model-change="vm.onTripsChanged()"
+                                  modal-title="product.trip-select"
+                                  data="vm.trips"
+                                  item-label="doc.translations.longName"
+                                  item-icon=""
+                                  item-id="doc._id"
+                                  placeholder="{{'menu.wishlist' | translate}}"
+                                  show-label-in-list="true">
+                </modal-select-box>
+            </ion-item>
+
+        </ion-list>
+
+        <div class="row">
+                <button class="base-button button-royal shopeur-icon icon-shopeur-preordered-status"
+                        ng-if="!vm.editMode"
+                        ng-click="vm.create()"
+                        translate="global.create">
+                </button>
+                <button class="base-button button-royal shopeur-icon icon-shopeur-edit-product"
+                        ng-if="vm.editMode"
+                        ng-click="vm.update()"
+                        translate="global.update">
+                </button>
+        </div>
+        <div class="row">
+            <button class="base-button button-calm button-outline shopeur-icon icon-shopeur-close"
+                    ng-click="vm.goBack()"
+                    translate="global.cancel">
+            </button>
+        </div>
+
+    </ion-content>
+</ion-view>

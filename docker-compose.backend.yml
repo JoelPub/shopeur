@@ -1,0 +1,56 @@
+version: '2'
+services:
+  php:
+    image: 'registry-v2.hrzg.de/shopeur/appshopeurcom-php:0.10.5'
+    links:
+      - 'redis:REDIS'
+      - 'couchdb:COUCHDB'
+    volumes:
+      - /app
+      - /tmp/couch
+    networks:
+      - default
+    depends_on:
+      - db
+      - mailcatcher
+      - couchdb
+    environment:
+      - COUCHDB_5984_TCP_ADDR=couchdb
+      - COUCHDB_5984_TCP_PORT=5984
+      - COUCHDB_PASS=dev123
+      - COUCHDB_DATABASE=shopeur
+      - APP_MIGRATION_LOOKUP=@app/migrations/demo-data
+      - APP_ADMIN_PASSWORD=admin1
+      - AMAZON_S3_BUCKET_PUBLIC_KEY=XXXXXX
+      - AMAZON_S3_BUCKET_SECRET_KEY=XXXXXX
+
+  nginx:
+    image: phundament/nginx-one:1.9
+    depends_on:
+      - php
+    links:
+      - 'php:PHPFPM'
+    volumes_from:
+      - php
+    environment:
+      VIRTUAL_HOST: ~app.shopeur.com
+      CERT_NAME: default
+      FASTCGI_PASS_HOST: php
+
+  redis:
+    image: redis:3
+
+  couchdb:
+    image: klaemo/couchdb:1.6
+
+  db:
+    image: percona:5.6
+    environment:
+      MYSQL_ROOT_PASSWORD: secretadmin
+    ports:
+      - 3306
+
+  mailcatcher:
+    image: nisenabe/mailcatcher
+    ports:
+      - '1080'

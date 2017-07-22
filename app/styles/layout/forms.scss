@@ -1,0 +1,51 @@
+::-webkit-input-placeholder {
+  color: $gold;
+}
+
+.list {
+  .item {
+    .input-label {
+      font-size: $font-size-base;
+      color: $gold;
+    }
+  }
+  .item-input {
+    border-bottom: 1px solid $grey;
+    background: transparent;
+    input {
+      background-color: #fff;
+    }
+  }
+}
+
+.buttons {
+  text-align: center;
+  .button {
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+  }
+}
+
+.welcome-view {
+  .buttons {
+    .login,
+    .sign-up {
+      width: 45%;
+    }
+  }
+}
+
+.trip-view {
+  .list {
+    .item-input {
+      input[type="date"] {
+        text-align: right;
+        padding-top: 10px;
+        padding-right: 10px;
+      }
+    }
+  }
+}

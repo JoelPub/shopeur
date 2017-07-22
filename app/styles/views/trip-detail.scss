@@ -1,0 +1,95 @@
+.trip-detail-view {
+
+  .list:first-child {
+    margin-top: 10px;
+  }
+
+  .product-list {
+    .item {
+      &.product-list-item {
+        border-top: 1px solid $gold;
+        border-bottom: 1px solid $gold;
+        .list-inset {
+          margin: 0;
+          .item-complex {
+            .item-content {
+              padding-top: 10px;
+              padding-right: 10px;
+              padding-bottom: 15px;
+              img {
+                top: 5px;
+                left: 5px;
+              }
+            }
+          }
+        }
+        .trip-detail-product {
+          height: 113px;
+        }
+      }
+    }
+  }
+
+  &.pane[hide-nav-bar="true"] {
+    .has-tabs-top {
+      top: 0;
+    }
+  }
+
+  h1 {
+    color: $gold !important;
+  }
+
+  ion-item {
+    p {
+      //font-family: $font-family-light-sans-serif;
+    }
+  }
+
+  .trip-info-container {
+    //background: $gold;
+    h2, p {
+      //color: white;
+    }
+    h2 {
+      text-transform: uppercase;
+    }
+  }
+
+  .brand-container {
+    height: 60px;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    .button {
+      color: $gold;
+      position: absolute;
+      //top: 10px;
+      &.icon-shopeur-store-info {
+        right: 150px;
+        font-size: 42px;
+      }
+      &.icon-shopeur-qr-code {
+        right: 75px;
+        font-size: 52px;
+      }
+      &.icon-shopeur-close,
+      &.icon-shopeur-preorder-product {
+        right: 0;
+        color: #fff;
+      }
+    }
+  }
+
+  .trip-detail-map-link {
+    display: inline-block;
+    font-size: 52px;
+    position: relative;
+    left: 15px;
+    top: 5px;
+  }
+
+  .brand-logo {
+    max-width: 105px;
+  }
+}

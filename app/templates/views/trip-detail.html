@@ -1,0 +1,105 @@
+<ion-view class="trip-detail-view">
+
+    <ion-content>
+        <ion-list type="list-inset" ng-if="vm.trip">
+            <ion-item class="item item-thumbnail-left trip-info-container">
+
+                <img db-img doc-id="vm.trip.doc.destination.value._id"
+                     attachment-id="vm.trip.doc.destination.value.image_file">
+
+                <h2>
+                    <span translations="vm.trip.doc.country.value.translations" field="name"
+                          ng-if="vm.trip.doc.country.value.translations"></span>
+                    <span> - </span>
+                    <span translations="vm.trip.doc.city.value.translations" field="name"></span>
+                </h2>
+
+                <p translations="vm.trip.doc.destination.value.translations" field="location"></p>
+                <p>{{vm.trip.doc.startDate | date : 'shortDate'}} - {{vm.trip.doc.endDate | date : 'shortDate'}}</p>
+
+            </ion-item>
+        </ion-list>
+
+        <div class="row">
+            <div class="col">
+                <button class="button button-full button-assertive button-outline icon ion-ios-trash-outline"
+                        ng-click="vm.delete()"
+                        id="deleteTripBtn">
+                </button>
+            </div>
+            <div class="col">
+                <button class="button button-full button-energized button-outline icon shopeur-icon icon-shopeur-edit-product"
+                        ng-click="vm.edit()"
+                        id="editTripBtn">
+                </button>
+            </div>
+            <div class="col">
+                <button class="button button-full button-royal icon shopeur-icon icon-shopeur-new-product"
+                        ng-click="vm.addProduct()">
+                </button>
+            </div>
+        </div>
+
+        <div class="list product-list" ng-if="vm.brandGroups">
+
+            <div class="item product-list-item"
+                 ng-show="group.products.length"
+                 ng-repeat="group in vm.brandGroups track by group.brand.id">
+
+                <div class="brand-container">
+                    <img class="brand-logo"
+                         db-img doc-id="group.brand._id"
+                         attachment-id="group.brand.logo_file">
+
+                    <i ng-click="vm.openMap(group.brand.store.latitude, group.brand.store.longitude)"
+                       ng-if="group.brand.store.latitude && group.brand.store.longitude"
+                       class="trip-detail-map-link shopeur-icon icon-shopeur-location">
+                    </i>
+
+                    <button class="button button-energized icon-right shopeur-icon icon-shopeur-preorder-product"
+                            ng-if="vm.trip.doc.startDate && vm.trip.doc.endDate"
+                            ng-click="vm.preorder(group);">
+                        <span translate="tripdetail.preorder"></span>
+                    </button>
+                </div>
+
+                <ion-list type="list-inset" ng-if="group.products">
+                    <ion-item class="item-thumbnail-left trip-detail-product"
+                              ng-repeat="product in group.products track by product.id"
+                              ng-click="vm.editProduct(product)">
+
+                        <img ng-src="{{product.doc.imageURI}}">
+
+                        <p>
+                            <b><span translations="product.doc.brand.translations" field="title"></span></b>
+                        </p>
+                        <p>
+                            <span translations="product.doc.category.doc.translations" field="title" ng-if="product.doc.category"></span>
+                        </p>
+                        <p>
+                            <i class="icon ion-ios-arrow-forward"></i>
+                            {{product.doc.size}}
+                        </p>
+                        <p>
+                            <i class="icon ion-ios-barcode"></i>
+                            {{product.doc.productCode}}
+                        </p>
+
+                        <ion-option-button class="button-mint"
+                                           ng-click="vm.editProduct(product)">
+                            <i class="shopeur-icon icon-shopeur-edit-product"></i>
+                        </ion-option-button>
+
+                        <ion-option-button class="button-assertive"
+                                           ng-click="vm.deleteProduct(product)">
+                            <i class="icon ion-android-close"></i>
+                        </ion-option-button>
+
+                    </ion-item>
+                </ion-list>
+
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

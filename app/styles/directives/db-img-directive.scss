@@ -1,0 +1,6 @@
+.db-image {
+  @include animation('fade-in 0.3s 1');
+  &.hidden {
+    opacity: 0;
+  }
+}

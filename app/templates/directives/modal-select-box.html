@@ -1,0 +1,15 @@
+<ion-modal-view class="modal-select" id="{{vm.id}}Modal">
+    <ion-header-bar>
+        <h1 class="title" translate="{{vm.modalTitle}}"></h1>
+        <button ng-click="vm.closeSelectModal()" class="button button-icon shopeur-icon icon-shopeur-close"></button>
+    </ion-header-bar>
+    <ion-content>
+        <label class="item item-input" ng-if="vm.searchableList">
+            <i class="icon ion-search placeholder-icon"></i>
+            <input type="search" placeholder="{{ 'global.search' | translate }}" ng-model="vm.searchText">
+        </label>
+        <ul class="list">
+            <div ng-include="vm.listItemUrl"></div>
+        </ul>
+    </ion-content>
+</ion-modal-view>

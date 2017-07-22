@@ -1,0 +1,74 @@
+<ion-view class="login-view">
+    <ion-content>
+
+        <div class="row">
+            <div class="col">
+                <img src="assets/images/shopeur-logo-raute.svg" class="logo">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <form name="shopeurLogin">
+                    <div class="">
+                        <label class="item item-input">
+                            <input type="email"
+                                   ng-model="vm.credentials.login"
+                                   name="login"
+                                   required
+                                   translate
+                                   translate-attr-placeholder="login.placeholder">
+                        </label>
+                        <label class="item item-input">
+                            <input type="password"
+                                   ng-model="vm.credentials.password"
+                                   name="password"
+                                   required
+                                   translate
+                                   translate-attr-placeholder="login.password">
+                        </label>
+
+                        <ul>
+                            <li class="item item-toggle">
+                                <span translate="settings.logged"></span>
+                                <label class="toggle toggle-balanced">
+                                    <input type="checkbox"
+                                           ng-model="vm.keepLoggedIn"
+                                           ng-change="vm.toggleStayLoggedIn()">
+
+                                    <div class="track">
+                                        <div class="handle"></div>
+                                    </div>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col buttons">
+
+                <button ng-click="vm.go()"
+                        class="button button-full button-royal button-large login"
+                        ng-disabled="shopeurLogin.$invalid"
+                        translate="login.button">
+                </button>
+
+                <button ng-click="vm.forgot()"
+                        class="button button-full button-clear forgot"
+                        translate="login.forgot">
+                </button>
+
+                <button ng-click="vm.signup()"
+                        class="button button-full button-balanced sign-up"
+                        translate="login.signup">
+                </button>
+
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

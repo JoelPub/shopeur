@@ -1,0 +1,78 @@
+<ion-view class="trip-view">
+    <ion-content>
+
+        <ion-list>
+            <ion-item class="item item-input item-select" ng-show="!vm.editMode">
+                <div class="input-label" translate="product.brand"></div>
+                <modal-select-box id="brandsSelect"
+                                  model="vm.form.brand"
+                                  model-change="vm.onBrandChanged()"
+                                  modal-title="Select a brand"
+                                  data="vm.brands"
+                                  item-label="translations.title"
+                                  item-icon="logo_file"
+                                  item-id="_id"
+                                  placeholder="..."
+                                  show-label-in-list="false">
+                </modal-select-box>
+            </ion-item>
+        </ion-list>
+
+        <div class="header">
+            <img src="assets/images/planeten.jpg" alt="">
+        </div>
+
+        <ion-list>
+            <ion-item class="item item-input item-select" ng-show="!vm.editMode">
+                <div class="input-label" translate="trip.destination"></div>
+                <modal-select-box id="destinationsSelect"
+                                  model="vm.form.destination"
+                                  model-change="vm.onDestinationChanged()"
+                                  modal-title="trip.select"
+                                  data="vm.destinations"
+                                  group-item-label="doc.translations.name"
+                                  group-item-icon="doc.icon_file"
+                                  group-item-id="doc._id"
+                                  item-label="value.translations.location"
+                                  item-icon=""
+                                  item-id="value.id"
+                                  placeholder="..."
+                                  show-label-in-list="true"
+                                  searchable-list="true">
+                </modal-select-box>
+            </ion-item>
+
+            <!-- NOTE:
+            calender picker is not opening in ion-item
+            therefore using the label with item class
+            -->
+            <label class="item item-input" ng-show="vm.form.destination || vm.editMode">
+                <span class="input-label" translate="trip.startdate"></span>
+                <input type="date" min="{{vm.minDate}}" ng-model="vm.form.startDate">
+            </label>
+
+            <label class="item item-input" ng-show="vm.form.destination || vm.editMode">
+                <span class="input-label" translate="trip.enddate"></span>
+                <input type="date" min="{{vm.getEndDateMin()}}" ng-model="vm.form.endDate">
+            </label>
+
+        </ion-list>
+
+        <div class="row">
+            <div class="col col-100">
+                <button class="base-button button-gold shopeur-icon icon-shopeur-preordered-status"
+                        ng-if="!vm.editMode"
+                        ng-click="vm.create()"
+                        translate="global.create">
+                </button>
+
+                <button class="base-button button-gold shopeur-icon icon-shopeur-edit-product"
+                        ng-if="vm.editMode"
+                        ng-click="vm.update()"
+                        translate="global.update">
+                </button>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

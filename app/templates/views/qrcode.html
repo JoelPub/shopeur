@@ -1,0 +1,26 @@
+<ion-view class="qrcode-view account-settings-view">
+    <ion-content>
+        <ion-list type="list-inset">
+
+            <ion-item class="item item-input qrcode-item">
+                <qr type-number="8" correction-level="'M'" size="250" text="vm.url" image="false"></qr>
+            </ion-item>
+
+            <ion-item class="item item-input">
+                <div class="input-label" translate="login.user-id"></div>
+                <input type="text" ng-model="vm.user.id" readonly>
+            </ion-item>
+
+            <ion-item class="item item-input">
+                <div class="input-label" translate="login.username"></div>
+                <input type="text" ng-model="vm.localeName" readonly>
+            </ion-item>
+
+            <ion-item class="item item-input">
+                <div class="input-label" translate="login.email"></div>
+                <input type="text" ng-model="vm.user.email"readonly>
+            </ion-item>
+
+        </ion-list>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,146 @@
+<ion-side-menus enable-menu-with-back-views="true">
+
+    <!-- Header bar -->
+    <ion-nav-bar class="bar-positive" align-title="center">
+
+        <ion-nav-buttons side="left">
+
+            <button ng-show="vm.showMenuButton"
+                    id="sideMenuToggle"
+                    class="button button-icon button-clear shopeur-icon icon-shopeur-menue"
+                    menu-toggle="left">
+            </button>
+
+            <button ng-show="vm.showCancelButton"
+                    id="cancelButton"
+                    class="button button-icon button-clear shopeur-icon icon-shopeur-close"
+                    ng-click="vm.goBack()">
+            </button>
+
+            <button ng-show="vm.showBackButton"
+                    id="backButton"
+                    class="button button-icon button-clear shopeur-icon icon-shopeur-arrow-left"
+                    ng-click="vm.goBack()">
+            </button>
+
+        </ion-nav-buttons>
+
+        <ion-nav-title class="view-title">
+            <img ng-show="!vm.showNavTitle" class="title-image" src="assets/images/logo-shopeur.svg"/>
+            <h1 ng-show="vm.showNavTitle" class="title">{{vm.navTitle}}</h1>
+        </ion-nav-title>
+
+        <ion-nav-buttons side="right" class="nav-buttons-right">
+
+            <button class="button button-icon button-clear shopeur-icon icon-shopeur-qr-code"
+                    ng-show="vm.showQRButton"
+                    ui-sref="app.qrcode"
+                    href="#/app/qrcode">
+            </button>
+
+            <button class="button button-icon button-clear shopeur-icon icon-shopeur-preordered-status"
+                    id="saveProfileButton"
+                    ng-show="vm.showSaveProfileButton"
+                    ng-click="vm.clickHandler($event)">
+            </button>
+
+            <button class="button button-icon button-clear shopeur-icon icon-shopeur-preordered-status"
+                    id="saveAccountSettingsButton"
+                    ng-show="vm.showSaveAccountSettingsButton"
+                    ng-click="vm.clickHandler($event)">
+            </button>
+
+            <!-- Product -->
+            <button class="button button-icon button-clear shopeur-icon icon-shopeur-new-product"
+                    id="newProductButton"
+                    ng-show="vm.showNewProductButton"
+                    ng-click="vm.clickHandler($event)">
+            </button>
+
+            <button class="button button-icon button-clear shopeur-icon icon-shopeur-preordered-status"
+                    id="createProductButton"
+                    ng-show="vm.showCreateProductButton"
+                    ng-if="!vm.productEditMode"
+                    ng-click="vm.clickHandler($event)">
+            </button>
+
+            <button class="button button-icon button-clear shopeur-icon icon-shopeur-edit-product"
+                    id="updateProductButton"
+                    ng-show="vm.showUpdateProductButton"
+                    ng-if="vm.productEditMode"
+                    ng-click="vm.clickHandler($event)">
+            </button>
+
+            <!-- Trip -->
+            <button class="button button-icon button-clear shopeur-icon icon-shopeur-new-product"
+                    id="newTripButton"
+                    ng-show="vm.showNewTripButton"
+                    ng-click="vm.clickHandler($event)">
+            </button>
+
+            <button class="button button-icon button-clear shopeur-icon icon-shopeur-preordered-status"
+                    id="createTripButton"
+                    ng-show="vm.showCreateTripButton"
+                    ng-if="!vm.tripEditMode"
+                    ng-click="vm.clickHandler($event)">
+            </button>
+
+            <button class="button button-icon button-clear shopeur-icon icon-shopeur-edit-product"
+                    id="updateTripButton"
+                    ng-show="vm.showUpdateTripButton"
+                    ng-if="vm.tripEditMode"
+                    ng-click="vm.clickHandler($event)">
+            </button>
+
+        </ion-nav-buttons>
+
+    </ion-nav-bar>
+
+    <!-- Center content -->
+    <ion-side-menu-content drag-content="false">
+        <ion-nav-view name="viewContent"></ion-nav-view>
+    </ion-side-menu-content>
+
+    <!-- Left menu -->
+    <ion-side-menu side="left" class="side-menu" width="150">
+
+        <ion-header-bar align-title="center" class="bar-stable">
+            <!--h1 class="title" translate="menu.title"></h1-->
+        </ion-header-bar>
+
+        <ion-content class="has-header">
+            <div class="list">
+                <a ng-repeat="item in vm.menuItems track by item.id"
+                   ui-sref-active="active"
+                   ui-sref="{{item.name}}"
+                   class="item"
+                   menu-toggle>
+
+                    <span>{{ 'menu.' + item.id | translate }}</span>
+                </a>
+            </div>
+        </ion-content>
+    </ion-side-menu>
+
+    <!-- Footer menu -->
+    <ion-footer-bar ng-hide="vm.hideFooterNav" class="bar-positive">
+
+        <a menu-close ui-sref="app.home" ui-sref-active="active" class="tab-item" id="footerHome">
+            <i class="shopeur-icon icon-shopeur-icon-home"></i>
+        </a>
+
+        <a menu-close ui-sref="app.wishlist" ui-sref-active="active" class="tab-item" id="footerWishlist">
+            <i class="shopeur-icon icon-shopeur-like-feature"></i>
+        </a>
+
+        <a menu-close ui-sref="app.trips" ng-class="{'active': vm.highlightTripsNavItem}" class="tab-item" id="footerTrips">
+            <i class="shopeur-icon icon-shopeur-plane"></i>
+        </a>
+
+        <a menu-close ng-click="vm.openInAppBrowser()" ui-sref-active="active" class="tab-item">
+            <i class="shopeur-icon icon-shopeur-preorder-product"></i>
+        </a>
+
+    </ion-footer-bar>
+
+</ion-side-menus>

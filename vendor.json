@@ -1,0 +1,11 @@
+[
+    "bower_components/ionic/js/ionic.bundle.js",
+    "bower_components/angular-translate/angular-translate.js",
+    "bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js",
+    "bower_components/angular-dynamic-locale/dist/tmhDynamicLocale.js",
+    "bower_components/ngCordova/dist/ng-cordova.js",
+    "bower_components/qrcode/lib/qrcode.min.js",
+    "bower_components/angular-qr/angular-qr.min.js",
+    "bower_components/pouchdb/dist/pouchdb.js",
+    "bower_components/chance/chance.js"
+]

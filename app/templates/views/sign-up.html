@@ -1,0 +1,74 @@
+<ion-view class="sign-up-view">
+    <ion-content>
+
+        <div class="row">
+            <div class="col">
+                <img src="assets/images/shopeur-logo-raute.svg" class="logo">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <form name="shopeurSignup">
+                    <div class="list">
+
+                        <!--<label class="item item-input">
+                            <input type="text"
+                                   ng-model="vm.user.username"
+                                   name="username"
+                                   required
+                                   translate
+                                   translate-attr-placeholder="signup.username">
+                        </label>-->
+
+                        <label class="item item-input">
+                        <input type="email"
+                                   ng-model="vm.user.email"
+                                   name="email"
+                                   required
+                                   translate
+                                   translate-attr-placeholder="signup.email">
+                        </label>
+
+                        <label class="item item-input">
+                            <input type="password"
+                                   id="pw1" name="pw1"
+                                   ng-model="vm.user.password1"
+                                   required
+                                   translate
+                                   translate-attr-placeholder="signup.password">
+                        </label>
+
+                        <label class="item item-input">
+                            <input type="password"
+                                   id="pw2" name="pw2"
+                                   ng-model="vm.user.password2"
+                                   pw-check="pw1"
+                                   required
+                                   translate
+                                   translate-attr-placeholder="signup.password">
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col buttons">
+                <button ng-click="vm.createAccount()"
+                        translate="signup.create"
+                        ng-disabled="shopeurSignup.$invalid"
+                        class="button button-full button-energized create">
+                </button>
+
+                <button ng-click="vm.login()"
+                        class="button button-full button-calm forgot"
+                        translate="login.back">
+                </button>
+            </div>
+        </div>
+
+
+
+    </ion-content>
+</ion-view>

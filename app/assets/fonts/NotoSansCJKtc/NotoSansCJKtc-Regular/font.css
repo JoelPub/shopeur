@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'NotoSansCJKtc-Regular-Alphabetic';
+  src: url('NotoSansCJKtc-Regular.eot'); /* IE9 Compat Modes */
+  src: url('NotoSansCJKtc-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('NotoSansCJKtc-Regular.woff') format('woff'), /* Modern Browsers */
+       url('NotoSansCJKtc-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('NotoSansCJKtc-Regular.svg#6509a3dca9eebf874258070a639b80f7') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+

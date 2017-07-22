@@ -1,0 +1,14 @@
+a.item,
+a.item.active {
+  background: $mint;
+  text-transform: uppercase;
+  border: none;
+}
+
+a.item.active {
+  color: $gold;
+}
+
+a.item {
+  color: #fff;
+}

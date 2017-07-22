@@ -1,0 +1,91 @@
+.home-view {
+  .buttons {
+    button {
+      white-space: normal;
+      margin: 0;
+      padding: 20px 10px 0 10px;
+      i {
+        font-size: 40px;
+        border-bottom: 2px solid $formTextColor;
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+        display: inline-block;
+      }
+      p {
+        font-size: 18px;
+        line-height: 20px;
+        height: 40px;
+        text-transform: uppercase;
+        font-family: $font-family-sans-serif;
+      }
+      @media only screen and (max-width: 400px) {
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .slide {
+    .slide-text {
+      position: relative;
+      text-align: center;
+      //color: #fff;
+      padding: 0 10px;
+    }
+  }
+  .notification-slides {
+    color: $red;
+    border: 1px solid $red;
+    .slide {
+      height: 75px;
+      .slide-text {
+        top: 15px;
+      }
+      .marker {
+        border-bottom: 2px solid $red;
+      }
+    }
+  }
+  .story-slides {
+    .slide {
+      max-height: 150px;
+      .slide-image {
+        img {
+          max-height: 150px;
+        }
+      }
+      .slide-text {
+        color: #fff;
+        top: -95px;
+      }
+    }
+  }
+  .inspired {
+    color: $gold;
+    line-height: 30px;
+    text-align: center;
+    border-bottom: 1px solid $gold;
+  }
+  .inspiration-image {
+    max-width: 50%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    padding-top: 0;
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 40px;
+  }
+  .wrap-this {
+    -webkit-flex-wrap: wrap;-ms-flex-wrap: wrap;flex-wrap: wrap;
+  }
+  .slide-text {
+    text-transform: uppercase;
+  }
+  .marker {
+    width: 40px;
+    border-bottom: 2px solid #FFFFFF;
+    display: block;
+    margin: 0 auto 8px;
+  }
+}

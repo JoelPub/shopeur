@@ -1,0 +1,84 @@
+<ion-view class="profile-view">
+    <ion-content>
+
+        <div class="row">
+            <div class="col">
+                <div class="avatar-wrapper list card">
+                    <div class="item item-avatar">
+                        <img ng-src="{{vm.avatar}}">
+                        <h2>{{vm.message}}</h2>
+                        <h3>{{vm.localeName}}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col col-50">
+                <div class="" ui-sref="app.edit-profile">
+                    <div class="button button-full button-royal" translate="profile.title"></div>
+                </div>
+            </div>
+            <div class="col col-50">
+                <div class="" ui-sref="app.account-settings">
+                    <div class="button button-full button-royal" translate="profile.account-settings"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <ion-list>
+
+            <div class="row profile-item">
+                <div class="col-50" translate="profile.gender"></div>
+                <div id="profileGender" class="col-50" translate="profile.{{vm.profile.gender}}" ng-show="vm.profile.gender"></div>
+            </div>
+
+            <div class="row profile-item">
+                <div class="col-50" translate="profile.date-of-birth"></div>
+                <div id="profileDateOfBirth" class="col-50">{{vm.profile.date_of_birth | date : 'shortDate'}}</div>
+            </div>
+
+            <div class="row profile-item">
+                <div class="col-50" translate="profile.body-height"></div>
+                <div id="profileBodyHeight" class="col-50">{{vm.profile.body_height}} cm</div>
+            </div>
+
+            <div class="row profile-item">
+                <div class="col-50" translate="profile.weight"></div>
+                <div id="profileWeight" class="col-50">{{vm.profile.weight}} kg</div>
+            </div>
+
+            <div class="row profile-item">
+                <div class="col-50" translate="profile.chest"></div>
+                <div id="profileChest" class="col-50">{{vm.profile.chest}} cm</div>
+            </div>
+
+            <div class="row profile-item">
+                <div class="col-50"translate="profile.waist">Waist</div>
+                <div id="profileWaist" class="col-50">{{vm.profile.waist}} cm</div>
+            </div>
+
+            <div class="row profile-item">
+                <div class="col-50" translate="profile.hips"></div>
+                <div id="profileHips" class="col-50">{{vm.profile.hips}} cm</div>
+            </div>
+
+            <div class="row profile-item">
+                <div class="col-50" translate="profile.shoe-size"></div>
+                <div id="profileShoeSize" class="col-50">{{vm.profile.shoe_size}} (us)</div>
+            </div>
+
+            <!--<div class="row profile-item">
+                <div class="col-50" translate="profile.favourite-colors"></div>
+                <div class="col-50">
+                    <div ng-if="color.checked"
+                         ng-repeat="color in vm.colors track by color.id"
+                         class="color-circle"
+                         style="background-color: {{color.rgb}}">
+                    </div>
+                </div>
+            </div>-->
+
+        </ion-list>
+    </ion-content>
+</ion-view>

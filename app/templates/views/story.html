@@ -1,0 +1,13 @@
+<ion-view class="stories-view">
+    <ion-content>
+        <div class="story" ng-if="vm.story">
+            <img db-img doc-id="vm.story.doc._id" attachment-id="vm.story.doc.image_file">
+            <h1 class="gold">
+                <span translations="vm.story.doc.translations" field="headline"></span>
+            </h1>
+            <div>
+                <span translations="vm.story.doc.translations" field="content_html"></span>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,23 @@
+.contact-view {
+  background-image: url(../assets/images/shopeur-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  .card {
+    box-shadow: none;
+    border-radius: 0;
+    background: rgba(255, 255, 255, 1);
+    text-align: center;
+    padding: 10px;
+    font-family: $font-family-light-sans-serif;
+    -webkit-user-select: auto !important;
+    li{
+      font-size: 120%;
+    }
+  }
+
+  .gold-link {
+    color: $gold;
+  }
+
+
+}

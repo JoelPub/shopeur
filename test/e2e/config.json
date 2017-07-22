@@ -1,0 +1,7 @@
+{
+    "seleniumAddress": "http://chrome:4444/wd/hub",
+    "pageBaseUrl": "http://builder:9000/#",
+    "shortWaitTimeout": 3000,
+    "mediumWaitTimeout": 7500,
+    "longWaitTimeout": 15000
+}

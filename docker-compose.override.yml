@@ -1,0 +1,43 @@
+version: '2'
+services:
+  builder:
+    volumes:
+      # named volume for watchers in separate containers (shared)
+      - ./temp:/data/.tmp
+
+      # application source-code for local development
+      - ./app:/data/app
+      - ./gulpfile.js:/data/gulpfile.js
+
+      # enabled for local app and api development
+      - ./env-dev.js:/data/app/scripts/env.js
+
+      # protractor testing
+      - ./test:/data/test
+      - ./protractor.conf.js:/data/protractor.conf.js
+
+      # enable only for debugging
+      #- ./www:/data/www
+      #- ./output:/data/platforms/android/build/outputs
+      #- ./_debug:/data/debug
+      #- ./bower_components:/data/bower_components
+    ports:
+      - '24900:9000'
+      - '35729:35729'
+
+  nginx:
+    ports:
+      - 25980:80
+
+  chrome:
+    ports:
+      - 4444
+      - 5900
+
+  couchdb:
+    ports:
+      - 25984:5984
+
+
+volumes:
+  temp:

@@ -1,0 +1,49 @@
+.modal-select-box,
+.item-input input.modal-select-box {
+  position: absolute;
+  right: 0;
+  width: 65%;
+  text-align: right;
+  padding: 0;
+  &[readonly]:not(.cloned-text-input) {
+    padding-right: 48px;
+    background-color: #fff;
+  }
+}
+
+.modal-select {
+  .list {
+    .item {
+      &.item-icon {
+        padding: 10px;
+        text-align: center;
+        img {
+          max-width: 150px;
+          height: auto;
+        }
+      }
+      &.item-thumbnail-left {
+        padding: 10px 10px 10px 120px;
+        min-height: 50px;
+        img {
+          height: auto;
+          padding: 10px;
+          max-width: 50px;
+          position: absolute;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+        }
+        label {
+          position: absolute;
+          top: 50%;
+          right: 5%;
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+}

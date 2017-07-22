@@ -1,0 +1,8 @@
+<ion-spinner class="spinner-light"></ion-spinner><br/>
+<p translate="loading.msg"></p>
+<p>{{vm.templateMsg}}</p>
+<div class="progress">
+    <progress max="100" value="{{vm.templateProgress}}" class="Progress-main" aria-labelledby="ProgressLabel"></progress>
+    <label id="ProgressLabel">{{vm.templateProgress}}%</label>
+</div>
+<p class="cancel-button-wrapper"><button class="button button-small button-assertive" ng-click="vm.cancelPayment()">Cancel</button></p>

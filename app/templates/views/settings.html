@@ -1,0 +1,60 @@
+<ion-view class="settings-view">
+    <ion-content>
+        <ul class="list">
+
+            <li class="item item-toggle">
+
+                <span translate="settings.logged"></span>
+
+                <label class="toggle toggle-balanced">
+
+                    <input type="checkbox"
+                           ng-model="vm.isLoggedIn"
+                           ng-change="vm.loggedToggleChange()">
+
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+
+            </li>
+
+            <li class="item item-input item-select" ng-controller="LanguageCtrl as language">
+
+                <div class="input-label" translate="settings.language"></div>
+
+                <select ng-model="language.selected" ng-change="language.switchTo()"
+                        ng-options="language.availible.indexOf(item) as item for item in language.availible">
+                </select>
+
+            </li>
+
+            <li class="item">
+                <span translate="settings.version"></span>
+                <span class="item-note"><!-- git-version --></span>
+            </li>
+
+            <li class="item">
+                <button class="button button-block button-positive button-outline icon ion-log-out"
+                        ng-click="vm.logout()"
+                        translate="settings.logout">
+                </button>
+            </li>
+
+            <!--<li class="item">
+                <button class="button button-block button-positive button-outline icon ion-ios-refresh-outline"
+                        ng-click="vm.dbSync()"
+                        translate="settings.sync">
+                </button>
+            </li>
+
+            <li class="item">
+                <button class="button button-block button-assertive button-outline icon ion-ios-trash-outline"
+                        ng-click="vm.dbReset()"
+                        translate="settings.reset-db">
+                </button>
+            </li>-->
+
+        </ul>
+    </ion-content>
+</ion-view>

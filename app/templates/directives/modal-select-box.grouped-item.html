@@ -1,0 +1,29 @@
+<div ng-repeat="group in vm.data | filter: vm.searchText track by group.id"
+     ng-if="vm.groupItemId && group.destinations.length">
+
+    <li class="item item-thumbnail-left item-divider">
+        <img class="brand-logo"
+             db-img doc-id="vm.getObjectValue(group, vm.groupItemId)"
+             attachment-id="vm.getObjectValue(group, vm.groupItemIcon)">
+        <label ng-bind-html="vm.getObjectValue(group, vm.groupItemLabel)"></label>
+    </li>
+
+    <li ng-repeat="destination in group.destinations | filter: vm.searchText track by destination.id"
+              ng-click="vm.selectItem(destination)"
+              ng-class="{
+                            'item': !vm.itemIcon && vm.showLabelInList,
+                            'item item-icon': vm.itemIcon && !vm.showLabelInList,
+                            'item item-thumbnail-left': vm.itemIcon && vm.showLabelInList
+                        }">
+
+        <img class="brand-logo" ng-if="vm.itemIcon"
+             db-img doc-id="vm.getObjectValue(destination, vm.itemId)"
+             attachment-id="vm.getObjectValue(destination, vm.itemIcon)">
+
+        <label ng-bind-html="vm.getObjectValue(destination, vm.itemLabel)"
+               ng-if="vm.showLabelInList">
+        </label>
+
+    </li>
+
+</div>

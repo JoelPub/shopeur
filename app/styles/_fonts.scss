@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'NotoSans-Regular';
+  src: url('../assets/fonts/NotoSansCJKtc-Regular/NotoSansCJKtc-Regular.eot'); /* IE9 Compat Modes */
+  src: url('../assets/fonts/NotoSansCJKtc-Regular/NotoSansCJKtc-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../assets/fonts/NotoSansCJKtc-Regular/NotoSansCJKtc-Regular.woff') format('woff'), /* Modern Browsers */
+       url('../assets/fonts/NotoSansCJKtc-Regular/NotoSansCJKtc-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../assets/fonts/NotoSansCJKtc-Regular/NotoSansCJKtc-Regular.svg#6509a3dca9eebf874258070a639b80f7') format('svg'); /* Legacy iOS */
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'NotoSans-Light';
+  src: url('../assets/fonts/NotoSansCJKtc-Light/NotoSansCJKtc-Light.eot'); /* IE9 Compat Modes */
+  src: url('../assets/fonts/NotoSansCJKtc-Light/NotoSansCJKtc-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../assets/fonts/NotoSansCJKtc-Light/NotoSansCJKtc-Light.woff') format('woff'), /* Modern Browsers */
+       url('../assets/fonts/NotoSansCJKtc-Light/NotoSansCJKtc-Light.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../assets/fonts/NotoSansCJKtc-Light/NotoSansCJKtc-Light.svg#e0251faf461487e4ab9d5846e527eb25') format('svg'); /* Legacy iOS */
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'NotoSans-Bold';
+  src: url('../assets/fonts/NotoSansCJKtc-Bold/NotoSansCJKtc-Bold.eot'); /* IE9 Compat Modes */
+  src: url('../assets/fonts/NotoSansCJKtc-Bold/NotoSansCJKtc-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../assets/fonts/NotoSansCJKtc-Bold/NotoSansCJKtc-Bold.woff') format('woff'), /* Modern Browsers */
+       url('../assets/fonts/NotoSansCJKtc-Bold/NotoSansCJKtc-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../assets/fonts/NotoSansCJKtc-Bold/NotoSansCJKtc-Bold.svg#ccbf5a114f25c5236bb69951dbea8b79') format('svg'); /* Legacy iOS */
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: 700;
+}

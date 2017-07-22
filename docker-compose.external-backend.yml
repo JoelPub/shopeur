@@ -1,0 +1,12 @@
+version: '2'
+services:
+  builder:
+    networks:
+      - default
+      - backend
+
+networks:
+  backend:
+    external:
+      # Note: this must match COMPOSE_PROJECT_NAME in backend stack
+      name: p4appshopeurcom_default

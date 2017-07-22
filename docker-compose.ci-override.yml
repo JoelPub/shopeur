@@ -1,0 +1,12 @@
+version: '2'
+services:
+  builder:
+    command: gulp serve -t
+    volumes:
+      - ./test:/data/test
+      - ./protractor.conf.js:/data/protractor.conf.js
+      - ./_output/build:/data/_output/build
+      - ./_output/www:/data/_output/www
+      - ./env-staging-2.js:/data/www/scripts/env.js
+  chrome:
+    shm_size: 512M

@@ -1,0 +1,45 @@
+<ion-view class="welcome-view">
+    <ion-view hide-nav-bar="true">
+    <ion-content class="padding-horizontal">
+
+        <div class="row responsive-sm">
+            <div class="col">
+                <img src="assets/images/logo-shop-europe.svg" class="logo">
+            </div>
+        </div>
+
+        <div class="row responsive-sm">
+            <div class="col">
+                <ion-slide-box on-slide-changed="vm.slideHasChanged($index)" auto-play="false" does-continue="false">
+                    <ion-slide ng-repeat="teaser in vm.teasers track by teaser.id">
+                        <div class="slide">
+                            <div class="slide-image">
+                                <img class="teaser-img" ng-src="{{teaser.image}}">
+                            </div>
+                            <p class="slide-text">
+                                {{teaser.text}}
+                            </p>
+                        </div>
+                    </ion-slide>
+                </ion-slide-box>
+            </div>
+        </div>
+
+        <div class="row responsive-sm">
+            <div class="col buttons">
+
+                <button ng-click="vm.login()"
+                        class="button login"
+                        translate="welcome.login">
+                </button>
+
+                <button ng-click="vm.signup()"
+                        class="button sign-up"
+                        translate="welcome.signup">
+                </button>
+
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

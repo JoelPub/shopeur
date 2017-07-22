@@ -1,0 +1,17 @@
+<ion-view class="inspired-view">
+    <ion-content>
+
+        <div class="row">
+            <div class="col">
+                <p class="inspired" translate="home.inspired"></p>
+            </div>
+        </div>
+
+        <div class="row row-center wrap-this">
+            <div class="col-50" ng-repeat="inspiration in vm.inspirations">
+                <img class="inspiration-image" ng-src="{{inspiration.image}}">
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

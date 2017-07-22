@@ -1,0 +1,8 @@
+.cashier-center-view.view-pc .loginBox {padding: 0 !important; width: 100% !important; }
+input[type="text"], input[type="password"], .mi-input-account {height: auto !important; width: 100% !important; font-size: 36px !important; margin-top: 16px !important;}
+.mi-form-item {width: 80%; margin: 0 auto;}
+label, .mi-label, .aside-link, p {font-size: 28px !important;}
+.login-title-area {height: 40px !important;}
+#container .standardPwdContainer .ui-input {border: 1px solid #CCC;}
+.ag-cb {width: 30px; height: 30px;}
+.left-submitContainer.fn-left {margin: 25px 25% 0 25%;}

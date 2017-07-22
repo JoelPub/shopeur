@@ -1,0 +1,14 @@
+.login-view {
+  background-image: url(../assets/images/shopeur-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  p.recover-success {
+    color: $gold;
+  }
+
+  li {
+    background-color: transparent;
+    color: $gold;
+  }
+}

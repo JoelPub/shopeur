@@ -1,0 +1,127 @@
+<ion-view class="edit-profile-view">
+    <ion-content>
+        <ion-list>
+
+            <ion-item>
+                <div class="input-label" translate="profile.image"></div>
+                <div class="row">
+                    <div class="col col-50">
+                        <div class="image-wrapper" ng-class="{'dummy': !vm.imageURI}">
+                            <img ng-src="{{vm.imageURI}}" ng-if="vm.imageURI">
+                        </div>
+                    </div>
+                    <div class="col col-50">
+                        <button class="button button-full button-gold"
+                                ng-click="vm.select()"
+                                translate="global.select">
+                        </button>
+                        <button class="button button-full button-gold"
+                                ng-click="vm.delete()"
+                                ng-if="vm.form.image"
+                                translate="global.delete">
+                        </button>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item class="item item-input">
+                <div class="input-label" translate="profile.forename"></div>
+                <input type="text" ng-model="vm.form.forename">
+            </ion-item>
+
+            <ion-item class="item item-input">
+                <div class="input-label" translate="profile.surname"></div>
+                <input type="text" ng-model="vm.form.surname">
+            </ion-item>
+
+            <ion-item class="item item-input item-select">
+                <div class="input-label" translate="profile.gender"></div>
+                <select ng-model="vm.form.gender">
+                    <option value="female" translate="profile.female"></option>
+                    <option value="male" translate="profile.male"></option>
+                </select>
+            </ion-item>
+
+            <label class="item item-input">
+                <span class="input-label" translate="profile.date-of-birth"></span>
+                <input type="date" ng-model="vm.form.date_of_birth">
+            </label>
+
+            <ion-item class="item item-input">
+                <div class="input-label" translate="profile.body-height"></div>
+                <input type="number" ng-model="vm.form.body_height">
+                <span class="unit">cm</span>
+            </ion-item>
+
+            <ion-item class="item item-input">
+                <div class="input-label" translate="profile.weight"></div>
+                <input type="number" ng-model="vm.form.weight">
+                <span class="unit">kg</span>
+            </ion-item>
+
+            <ion-item class="item item-input">
+                <div class="input-label" translate="profile.chest"></div>
+                <input type="number" ng-model="vm.form.chest">
+                <span class="unit">cm</span>
+            </ion-item>
+
+            <ion-item class="item item-input">
+                <div class="input-label" translate="profile.waist"></div>
+                <input type="number" ng-model="vm.form.waist">
+                <span class="unit">cm</span>
+            </ion-item>
+
+            <ion-item class="item item-input">
+                <div class="input-label" translate="profile.hips"></div>
+                <input type="number" ng-model="vm.form.hips">
+                <span class="unit">cm</span>
+            </ion-item>
+
+            <ion-item class="item item-input">
+                <div class="input-label" translate="profile.shoe-size"></div>
+                <input type="number" ng-model="vm.form.shoe_size">
+                <span class="unit">(us)</span>
+            </ion-item>
+
+            <!--<ion-item>
+                <div class="input-label" translate="profile.select-color"></div>
+                <div class="list">
+                    <div ng-repeat="color in vm.colors track by color.id">
+                        <div class="row" ng-if="$index %2 == 0">
+                            <div class="col">
+                                <ion-checkbox
+                                        ng-checked="vm.colors[$index].checked"
+                                        ng-model="vm.colors[$index].checked"
+                                        class="checkbox-light">
+                                    <div class="color-item" style="background-color: {{vm.colors[$index].rgb}}"></div>
+                                </ion-checkbox>
+                            </div>
+
+                            <div class="col">
+                                <ion-checkbox
+                                        ng-checked="vm.colors[$index + 1].checked"
+                                        ng-model="vm.colors[$index + 1].checked"
+                                        class="checkbox-light">
+                                    <div class="color-item"
+                                         style="background-color: {{vm.colors[$index + 1].rgb}}"></div>
+                                </ion-checkbox>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>-->
+
+            <ion-item class="hint">
+                <div class="input-label" translate="profile.hint"></div>
+            </ion-item>
+
+            <ion-item class="item">
+                <button class="base-button button-positive shopeur-icon icon-shopeur-preordered-status"
+                        ng-click="vm.save()"
+                        translate="global.update">
+                </button>
+            </ion-item>
+
+        </ion-list>
+    </ion-content>
+</ion-view>

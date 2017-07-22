@@ -1,0 +1,86 @@
+.inspired-view {
+  .list:last-child.card {
+    margin: 0;
+  }
+  .card {
+    margin: 0;
+    border-radius: 0;
+    .item:first-child,
+    .item:last-child {
+      border-radius: 0;
+    }
+    .item-avatar {
+      height: 150px;
+      padding: 16px;
+      background-image: url("../assets/images/avatar-bg.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      h2, h3 {
+        color: $formTextColor;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      h2{
+        font-family: $font-family-light-sans-serif;
+      }
+      img {
+        max-width: 80px;
+        max-height: 80px;
+        position: relative;
+        top: initial;
+        left: initial;
+        margin: 0 auto;
+        display: block;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .buttons {
+    button {
+
+      margin: 0;
+      padding: 20px 10px;
+      i {
+        font-size: 40px;
+        border-bottom: 2px solid $formTextColor;
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+        display: inline-block;
+      }
+      p {
+        font-size: 18px;
+        line-height: 20px;
+        height: 40px;
+        text-transform: uppercase;
+        font-family: $font-family-sans-serif;
+      }
+      @media only screen and (max-width: 400px) {
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .inspired {
+    color: $gold;
+    line-height: 30px;
+    text-align: center;
+    border-bottom: 1px solid $gold;
+  }
+  .inspiration-image {
+    max-width: 50%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    padding-top: 0;
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 40px;
+  }
+  .wrap-this {
+    -webkit-flex-wrap: wrap;-ms-flex-wrap: wrap;flex-wrap: wrap;
+  }
+  .slide-text {
+    text-transform: uppercase;
+  }
+}

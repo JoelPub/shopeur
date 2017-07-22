@@ -1,0 +1,73 @@
+.profile-view {
+  .profile-item {
+    font-family: $font-family-light-sans-serif;
+    margin: 0 auto;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    .col-50:last-child {
+      text-align: right;
+    }
+  }
+  a.item-content {
+    padding: 0;
+  }
+  .color-circle {
+    border: 1px solid grey;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    display: inline-block;
+    background: #006699;
+    margin: 0 0 0 5px;
+  }
+}
+
+.edit-profile-view,
+.edit-account-view {
+  .color-item {
+    border: 1px solid $grey;
+    border-radius: 15px;
+    display: block;
+    width: 28px;
+    height: 28px;
+  }
+  .input-label {
+    min-width: 50%;
+    padding: 4px 0 0 0;
+  }
+  input {
+    max-width: 50%;
+    text-align: right;
+    &[type="date"] {
+      padding-top: 4px;
+      padding-right: 10px;
+    }
+  }
+  .hint {
+    .input-label {
+      width: 100%;
+      max-width: inherit;
+      white-space: normal;
+      padding: 0;
+      text-align: center;
+    }
+  }
+}
+
+.edit-profile-view {
+  .item-input {
+    &.item-select {
+      padding: 10px 0 10px 16px;
+    }
+    input[type='number'] {
+      padding-right: 0;
+    }
+    input[type='text'] {
+      padding-right: 16px;
+    }
+    .unit {
+      padding: 4px 16px 0 4px;
+      font-size: $font-size-base;
+    }
+  }
+}

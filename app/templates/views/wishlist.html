@@ -1,0 +1,55 @@
+<ion-view hide-nav-bar="false" class="wishlist-view">
+
+    <ion-content>
+        <ion-list type="list-inset"
+                  show-delete="vm.showDelete"
+                  show-reorder="vm.showReorder">
+
+            <ion-item ng-repeat="product in vm.products track by product.id"
+                      id="ionItem"
+                      class="item-thumbnail-left"
+                      ng-show="!product.doc.trip"
+                      ng-click="vm.edit(product)">
+
+                <img id="productImage" ng-src="{{product.doc.imageURI}}">
+
+                <p>
+                    <!--<small translate="product.brand"></small>-->
+                    <b><span translations="product.doc.brand.translations" field="title"></span></b>
+                </p>
+                <p>
+                    <span translations="product.doc.category.doc.translations" field="title" ng-if="product.doc.category"></span>
+                </p>
+                <p>
+                    <i class="icon ion-ios-arrow-forward"></i>
+                    {{product.doc.size}}
+                </p>
+                <p>
+                    <i class="icon ion-ios-barcode"></i>
+                    {{product.doc.productCode}}
+                </p>
+
+                <ion-option-button id="wishlistEditProductBtn" class="button-mint" ng-click="vm.edit(product)">
+                    <i class="shopeur-icon icon-shopeur-edit-product"></i>
+                </ion-option-button>
+
+                <ion-option-button class="button-assertive" ng-click="vm.delete(product)">
+                    <i class="icon ion-ios-trash-outline"></i>
+                </ion-option-button>
+
+            </ion-item>
+
+        </ion-list>
+
+        <div class="row">
+            <div class="col">
+                <button class="base-button button-royal shopeur-icon icon-shopeur-new-product"
+                        ng-click="vm.newProduct()"
+                        translate="product.new-product"
+                        id="wishlistNewProductBtn">
+                </button>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

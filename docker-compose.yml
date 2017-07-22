@@ -1,0 +1,29 @@
+version: '2'
+services:
+  builder:
+    image: registry-v2.hrzg.de/shopeur/ionic-shopeur-app${IMAGE_TAG}
+    build: .
+    command: "gulp docker-run"
+    depends_on:
+      - chrome
+
+    expose:
+      - 9000
+
+  chrome:
+    image: selenium/standalone-chrome-debug:2.53.0
+    ports:
+      - '5900'
+    # workaround for Docker Beta, see https://github.com/SeleniumHQ/docker-selenium/issues/227#issuecomment-224865735
+    dns: 8.8.4.4
+    environment:
+      - no_proxy=localhost
+
+  #firefox:
+  #  image: selenium/standalone-firefox-debug:2.53.0
+  #  ports:
+  #    - '5900'
+  #  # workaround for Docker Beta, see https://github.com/SeleniumHQ/docker-selenium/issues/227#issuecomment-224865735
+  #  dns: 8.8.4.4
+  #  environment:
+  #    - no_proxy=localhost

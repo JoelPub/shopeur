@@ -1,0 +1,19 @@
+.wishlist-view {
+
+  ion-item {
+    //border: none;
+    margin-bottom: 10px;
+    p {
+      font-family: $font-family-light-sans-serif;
+      color: #666;
+    }
+    .item-content {
+      padding-bottom: 0;
+    }
+    h2 {
+      text-transform: uppercase;
+    }
+  }
+
+
+}
