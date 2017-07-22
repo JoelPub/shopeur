@@ -1,7 +1,24 @@
+在chrome运行：
+    npm install -g cordova
+    npm install -g ionic
+    npm install -g bower
+    npm install -g gulp
+    npm install -g grunt-cli
+    npm install -g ios-sim
+    npm install -g http-server
+    npm install -g karma-cli
+    npm install -g protractor
+    npm install -g jasmine
+    npm install && bower install    
+    运行staging2环境：
+    拷贝env-staging-2.js到app/script/env.js
+    gulp
+chrome打开http://localhost:9000
+
 Shop-Europe / ionic-shopeur-app  
 ---------------
-  
-    
+
+
 ## Info
 
 - iOS / Android Application
@@ -47,19 +64,19 @@ Build "builder"
     docker-compose build
 
 Start server
-    
+
     docker-compose up -d
-    
+
 Run tests
-    
+
     docker-compose run --rm builder bash
 
 Inside the builder container    
-    
+
     $ protractor
 
 Run specs from folders    
-    
+
     $ protractor --specs='test/e2e/profile/*.spec.js'
 
 Run a single spec
@@ -86,7 +103,7 @@ Copy `apk`
     docker-compose run --rm builder \
         cp /data/platforms/android/build/outputs/apk/android-debug.apk /data/debug/android-debug-1.apk
 
-    
+
 See `gitlab-ci.yml`.    
 
 ### CI build trigger
@@ -138,26 +155,26 @@ Run the fakeapi server on port 3000 by default
 ### List information about the runtime environment
 
     ionic info
-	
+
 #### Output
-	
+
     Your system information:
-        
+
     Cordova CLI: 5.3.3
     Gulp version:  CLI version 3.9.0
     Gulp local:   Local version 3.9.0
     Ionic CLI Version: 1.7.12
     Ionic App Lib Version: 0.6.5
-    ios-deploy version: 1.8.2 
-    ios-sim version: 5.0.3 
+    ios-deploy version: 1.8.2
+    ios-sim version: 5.0.3
     OS: Mac OS X El Capitan
     Node Version: v4.2.1
-    Xcode version: Xcode 7.2 Build version 7C68 
+    Xcode version: Xcode 7.2 Build version 7C68
 
 ### Build, emulate or run on device
 
 	sh deploy.sh
-	
+
 Select a preferred option.
 
 ### Build ionic / Cordova "www" directory
@@ -168,7 +185,7 @@ Select a preferred option.
 
     ionic platform add ios
     ionic platform add android
-	
+
 ### Add Plugins
 
     ionic plugin add cordova-plugin-splashscreen
@@ -210,7 +227,7 @@ By running just `gulp --build` or short `gulp -b`, we start gulp in build mode
 
 - concat all `.js` sources into single `app.js` file
 - version `main.css` and `app.js`
-- build everything into `www` 
+- build everything into `www`
 - remove debugs messages such as `console.log` or `alert` with passing `--release`
 - copy the `env.js` inside the `www` folder
 
@@ -248,7 +265,7 @@ Replace `splash.png` and `icon.png` inside `/resources`. Then run `ionic resourc
 
 ### Customizing themes
 
-Just override any Ionic variables in `app/styles/ionic-styles.scss`. 
+Just override any Ionic variables in `app/styles/ionic-styles.scss`.
 
 ### Reference
 
@@ -260,19 +277,19 @@ Just override any Ionic variables in `app/styles/ionic-styles.scss`.
 
     webdriver-manager update
     webdriver-manager start --seleniumPort=5555
-	
+
 #### Karma / Jasmin Unit Tests
 
     karma start
-	
+
 #### Protractor E2E Tests
 
     protractor protractor.conf.js
-	 
+
 ###### protractor.conf.js
 
     var Jasmine2HtmlReporter = require('protractor-jasmine2-html-reporter');
-    
+
     exports.config = {
         framework: 'jasmine2',
         //seleniumAddress: 'http://localhost:5555/wd/hub',    // local testing
@@ -329,7 +346,7 @@ Just override any Ionic variables in `app/styles/ionic-styles.scss`.
     ... Uhoh. Got error listen EADDRINUSE ...
     Error: listen EADDRINUSE
     ...
-    
+
 You're probably trying to use a port that is already in use.   
 Livereload listens on port 9000 to communicate with browser extensions.
 
@@ -346,9 +363,9 @@ To kill the processes being used by that port, type in your terminal:
 [https://github.com/driftyco/ionic-cli/issues/126](https://github.com/driftyco/ionic-cli/issues/126)  
 [http://stackoverflow.com/questions/26314005/ionic-failed-to-load-webpage-with-error-could-not-connect-to-the-server](http://stackoverflow.com/questions/26314005/ionic-failed-to-load-webpage-with-error-could-not-connect-to-the-server)  
 
-    Transport security has blocked a cleartext HTTP (http://) resource load since it is insecure. 
+    Transport security has blocked a cleartext HTTP (http://) resource load since it is insecure.
     Temporary exceptions can be configured via your app's Info.plist file.
-	
+
 See links above or add this to your '***-info.plist**' in Xcode
 
     <key>NSAppTransportSecurity</key>
@@ -393,11 +410,11 @@ or use a cordova plugin
 Get extended SDK list
 
 	android list sdk --all --extended
-	
+
 Cordova Android requirements
 
 	cordova requirements android
-	
+
 [http://stackoverflow.com/questions/32088336/android-headless-sdk-update]()  
 [http://de.androids.help/q2652]()  
 [http://stackoverflow.com/questions/31190355/ionic-build-android-error-no-installed-build-tools-found-please-install-the]()   
@@ -446,7 +463,3 @@ p: shopeurope15
 [http://app.shopeur.com.staging-1.oneba.se/en/user/login](http://app.shopeur.com.staging-1.oneba.se/en/user/login)
 u: admin
 p: mod.Uless11
-
-
-
-
