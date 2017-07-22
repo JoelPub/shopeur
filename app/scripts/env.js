@@ -11,9 +11,9 @@
  */
 //jshint unused: false
 var env = {
-    apiHost: 'http://nginx',
-    apiPort: 80,
-    couchDBHost: 'http://couchdb',
-    couchDBPort: 5984,
+    apiHost: 'https://app.shopeur.com.staging-2.oneba.se',
+    apiPort: null,
+    couchDBHost: 'https://couchdb.shopeur.com.staging-2.oneba.se',
+    couchDBPort: null,
     couchDBName: 'shopeur'
 };
