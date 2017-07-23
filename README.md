@@ -1,4 +1,7 @@
-## 在chrome运行： 
+## 在chrome运行：  
+-     运行staging2环境：
+-     拷贝env-staging-2.js到app/script/env.js
+###安装所需软件
 -     npm install -g cordova
 -     npm install -g ionic
 -     npm install -g bower
@@ -9,9 +12,9 @@
 -     npm install -g karma-cli
 -     npm install -g protractor
 -     npm install -g jasmine
--     npm install && bower install  
--     运行staging2环境：
--     拷贝env-staging-2.js到app/script/env.js
+###运行前安装本地包
+-     npm install && bower install 
+###运行
 -     gulp
 - chrome打开http://localhost:9000
 
