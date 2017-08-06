@@ -15,7 +15,7 @@
 #####运行前安装本地包
      npm install && bower install 
 #####运行
-     gulp
+     gulp -build
      chrome打开http://localhost:9000
 #### 在模拟器运行：
 ##### Add Platforms
