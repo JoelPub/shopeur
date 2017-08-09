@@ -12,9 +12,8 @@
      npm install -g karma-cli
      npm install -g protractor
      npm install -g jasmine
-#####运行前安装本地包
+#####本地运行 (相当于ionic官方步骤中的ionic serve，按照前端结构把文件build到www目录）
      npm install && bower install 
-#####运行
      gulp -build
      chrome打开http://localhost:9000
 #### 在模拟器运行：
