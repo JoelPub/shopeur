@@ -14,7 +14,12 @@
      npm install -g jasmine
 #####本地运行 (相当于ionic官方步骤中的ionic serve，按照前端结构把文件build到www目录）
      npm install && bower install 
-     gulp -build
+     gulp -build 
+     (
+     如果gulp报错local gulp not found in...
+     npm install gulp --save-dev
+     https://www.zhihu.com/question/33552192
+     )
      chrome打开http://localhost:9000
 #### 在模拟器运行：
 ##### Add Platforms
