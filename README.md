@@ -22,9 +22,6 @@
      )
      chrome打开http://localhost:9000
 #### 在模拟器运行：
-##### Add Platforms
-    ionic cordova platform add ios
-    ionic cordova platform add android
 ##### Add Plugins
     ionic cordova plugin add cordova-plugin-splashscreen
     ionic cordova plugin add cordova-plugin-camera
@@ -32,8 +29,8 @@
     ionic cordova plugin add cordova-plugin-transport-security
     ionic cordova plugin add cordova-plugin-globalization
 ##### Build iOS / Android
-    ionic build ios
-    ionic build android
+    ionic cordova build android
+    ionic cordova build ios
 ##### 用xcode／android studio打开
     platform/android/build.gradle
     platform/ios/Shopeur.xcodeproj
