@@ -26,6 +26,7 @@ services:
       - '35729:35729'
 
   nginx:
+    image: nginx:latest
     ports:
       - 25980:80
 
@@ -35,6 +36,7 @@ services:
       - 5900
 
   couchdb:
+    image: couchdb:latest
     ports:
       - 25984:5984
 

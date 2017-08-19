@@ -45,6 +45,7 @@
             });
 
             ApiService.post('api/v1/recover', {email: vm.form.email}, {sendToken: false})
+            // ApiService.get('69dGq7/a34a3c772988cc01d416be7ae51c76bafde4f797/files/snippet.json', {email: vm.form.email}, {sendToken: false})
                 .then(function () {
                     $ionicLoading.hide();
 

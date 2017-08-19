@@ -37,6 +37,7 @@
         function register(user) {
             var defer = $q.defer();
             ApiService.post('api/v1/register', user, {sendToken: false})
+            // ApiService.get('pRa85y/f5d7cf8c1bee9f7c218ec995478cdea37edfa299/files/snippet.json', user, {sendToken: false})
                 .then(function (res) {
                     _success = (res.data.id > 0);
                     defer.resolve(res);

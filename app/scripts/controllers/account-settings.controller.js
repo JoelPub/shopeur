@@ -84,6 +84,7 @@
 
             // Update account
             ApiService.post('api/v1/update-account', params)
+            // ApiService.get('xR5BeM/ce7cfe4ec8c2f8973524f75da71060317fba09f5/files/snippet.json', params)
                 .then(function(response) {
                     // Account was successfully updated
                     console.info('ApiService account updated => ', response);

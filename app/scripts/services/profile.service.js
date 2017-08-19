@@ -279,6 +279,7 @@
             var defer = $q.defer();
 
             ApiService.post('api/v1/update-profile', params)
+            // ApiService.get('doa5o5/f115356491e4121629511a1b6defce1601f19e00/files/snippet.json', params)
                 .then(function() {
                     return CameraService.getImageDataURI(profile.imageURI);
                 })
@@ -289,6 +290,7 @@
                         imageFileName: imageFileName
                     };
                     return ApiService.post('api/v1/image', params);
+                    // return ApiService.get('EArxRp/48fa31215afb5628c3f42955caa02f85862028cb/files/snippet.json', params);
                 })
                 .then(function() {
                     console.info('** Saved profile successfully...');
