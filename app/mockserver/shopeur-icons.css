@@ -1,0 +1,137 @@
+@font-face {
+  font-family: "shopeurIconFont";
+  src: url('../shopeurIconFont.eot');
+  src: url('../shopeurIconFont.eot?#iefix') format('eot'),
+    url('../shopeurIconFont.woff') format('woff'),
+    url('../shopeurIconFont.ttf') format('truetype'),
+    url('../shopeurIconFont.svg#shopeurIconFont') format('svg');
+}
+
+.shopeur-icon:before {
+  font-family: "shopeurIconFont";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  /* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+  text-decoration: none;
+  text-transform: none;
+}
+
+
+.icon-shopeur-arrow-left:before {
+  content: "\E001";
+}
+
+.icon-shopeur-arrow-open:before {
+  content: "\E002";
+}
+
+.icon-shopeur-arrow-right:before {
+  content: "\E003";
+}
+
+.icon-shopeur-camera:before {
+  content: "\E004";
+}
+
+.icon-shopeur-close:before {
+  content: "\E005";
+}
+
+.icon-shopeur-edit-product:before {
+  content: "\E006";
+}
+
+.icon-shopeur-edit-settings:before {
+  content: "\E007";
+}
+
+.icon-shopeur-icon-home:before {
+  content: "\E008";
+}
+
+.icon-shopeur-icons-user:before {
+  content: "\E009";
+}
+
+.icon-shopeur-like-feature:before {
+  content: "\E00A";
+}
+
+.icon-shopeur-location:before {
+  content: "\E00B";
+}
+
+.icon-shopeur-locked:before {
+  content: "\E00C";
+}
+
+.icon-shopeur-mail:before {
+  content: "\E00D";
+}
+
+.icon-shopeur-menue:before {
+  content: "\E00E";
+}
+
+.icon-shopeur-move-product-to-list:before {
+  content: "\E00F";
+}
+
+.icon-shopeur-new-product:before {
+  content: "\E010";
+}
+
+.icon-shopeur-not-available:before {
+  content: "\E011";
+}
+
+.icon-shopeur-plane:before {
+  content: "\E012";
+}
+
+.icon-shopeur-please-check:before {
+  content: "\E013";
+}
+
+.icon-shopeur-preorder-product:before {
+  content: "\E014";
+}
+
+.icon-shopeur-preordered-status:before {
+  content: "\E015";
+}
+
+.icon-shopeur-qr-code:before {
+  content: "\E016";
+}
+
+.icon-shopeur-received:before {
+  content: "\E017";
+}
+
+.icon-shopeur-show-info:before {
+  content: "\E018";
+}
+
+.icon-shopeur-star:before {
+  content: "\E019";
+}
+
+.icon-shopeur-store-info:before {
+  content: "\E01A";
+}
+
+.icon-shopeur-unlocked:before {
+  content: "\E01B";
+}
+
+.icon-shopeur-waiting-for-response:before {
+  content: "\E01C";
+}
+
+.icon-shopeur-wechat:before {
+  content: "\E01D";
+}

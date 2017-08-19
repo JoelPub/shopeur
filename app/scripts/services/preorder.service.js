@@ -80,8 +80,8 @@
 				products: JSON.stringify(productNameIds)
 			};
 
-			return ApiService.post('crud/api/user-trip/validate', params);
-			// return ApiService.get('epMde9/be79b3e5193bb1d05581258641dfd9290f44103f/files/snippet.json', params);
+			// return ApiService.post('crud/api/user-trip/validate', params);
+			return ApiService.get('epMde9/be79b3e5193bb1d05581258641dfd9290f44103f/files/snippet.json', params);
 		}
 
         /**
@@ -113,8 +113,8 @@
             //console.log('trip', trip);
             //console.log('params', params);
 
-						return ApiService.post('crud/api/user-trip/create', params);
-						// return ApiService.get('rLpKRy/506803ad08c305df7b61c54d70580ed9769b8839/files/snippet.json');
+						// return ApiService.post('crud/api/user-trip/create', params);
+						return ApiService.get('rLpKRy/506803ad08c305df7b61c54d70580ed9769b8839/files/snippet.json');
         }
 
         /**
@@ -135,8 +135,8 @@
                             imageFileName: product.id + '-image.jpg'
                         };
 
-												ApiService.post('api/v1/image', params)
-		                    // return ApiService.get('EArxRp/48fa31215afb5628c3f42955caa02f85862028cb/files/snippet.json', params);
+												// ApiService.post('api/v1/image', params)
+		                    ApiService.get('EArxRp/48fa31215afb5628c3f42955caa02f85862028cb/files/snippet.json')
                             .then(function() {
                                 defer.resolve();
                             })
@@ -168,8 +168,8 @@
                     name_id:		product.id
                 };
 
-								return ApiService.post('crud/api/user-product/create', params);
-								// return ApiService.get('bRgX6d/49fa43074b6e548b6120b2cd1d53193f4c0c5eff/files/snippet.json', params);
+								// return ApiService.post('crud/api/user-product/create', params);
+								return ApiService.get('bRgX6d/49fa43074b6e548b6120b2cd1d53193f4c0c5eff/files/snippet.json', params);
             };
         }
 

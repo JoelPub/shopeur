@@ -11,8 +11,8 @@
  */
 //jshint unused: false
 var env = {
-    apiHost: 'https://app.shopeur.com.staging-2.oneba.se',
-    // apiHost: 'https://bitbucket.org/!api/2.0/snippets/JoelPub',
+    // apiHost: 'https://app.shopeur.com.staging-2.oneba.se',
+    apiHost: 'https://bitbucket.org/!api/2.0/snippets/JoelPub',
     apiPort: null,
     couchDBHost: 'https://couchdb.shopeur.com.staging-2.oneba.se',
     // couchDBHost: 'https://bitbucket.org/!api/2.0/snippets/JoelPub',

@@ -440,8 +440,8 @@
             if (trip) {
                 vm.trip = trip;
                 var lastPreorder = vm.trip.doc.preorders[vm.trip.doc.preorders.length - 1];
-                vm.url = $sce.trustAsResourceUrl(ApiService.baseApiUrl() + '/en/mobile/customer/trip?access_token=' + token + '&user_trip_id=' + lastPreorder.user_trip_id);
-                // vm.url = $sce.trustAsResourceUrl(ApiService.baseApiUrl() + 'EEnzyn/d68c0ff84b15618e5db0b05836fc4db092d1ba40/files/snippet.html');
+                // vm.url = $sce.trustAsResourceUrl(ApiService.baseApiUrl() + '/en/mobile/customer/trip?access_token=' + token + '&user_trip_id=' + lastPreorder.user_trip_id);
+                vm.url = 'mockserver/customertrip.html';
                 vm.templateUrl = 'templates/loading/alipay.html';
                 iabTitle = 'PAYMENT';
             } else {

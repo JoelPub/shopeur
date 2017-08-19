@@ -187,6 +187,14 @@ gulp.task('version', function () {
         .pipe(gulp.dest(path.join(targetDir)))
         .on('error', errorHandler);
 });
+/**
+ * Copy test file
+ */
+gulp.task('mockserver', function () {
+    return gulp.src('app/mockserver/*.*')
+        .pipe(gulp.dest(path.join(targetDir,'mockserver')))
+        .on('error', errorHandler);
+});
 
 /**
  * Copy fonts
@@ -494,7 +502,8 @@ gulp.task('default', function (done) {
             'images',
             'svgs',
             'vendor',
-            'version'
+            'version',
+            'mockserver'
         ],
         'index',
         build ? 'noop' : 'watchers',
@@ -519,7 +528,8 @@ gulp.task('docker-run', function (done) {
             'images',
             'svgs',
             'vendor',
-            'version'
+            'version',
+            'mockserver'
         ],
         'index',
         build ? 'noop' : 'watchers',

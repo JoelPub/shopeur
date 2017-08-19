@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-param" content="_csrf">
+    <meta name="csrf-token" content="OFNwZFNMLkRnAx4tGBxkMHUmPAsdHmUASGYaKWMEWSlwBh9XPydHLQ==">
+    <title> - app-shopeur-com</title>
+    <link href="/mockserver/bootstrap.css" rel="stylesheet">
+<link href="/mockserver/app.css" rel="stylesheet">
+<link href="/mockserver/shopeur-icons.css" rel="stylesheet">
+<script type="text/javascript">function shareHandler(event, data) {
+            event.preventDefault();
+            window.parent.postMessage(
+                data,   // A stringified message to send.
+                '*'     // The intended origin, in this example we use the any origin wildcard.
+            );
+        }</script></head>
+<body>
+
+<div class="wrap">
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <span class="label label-danger">Not pre-ordered</span><div class="pull-right btn-group">
+<button id="w0" class="btn btn-info dropdown-toggle" data-toggle="dropdown">Order now <span class="caret"></span></button>
+
+<ul id="w1" class="dropdown-menu"><li><a href="/en/mobile/customer/create-payment?provider=alipay&amp;id=256&amp;access_token=-7X46098YwMFQkd9q2SqUj7Ft7oXh92w" tabindex="-1">AliPay</a></li>
+<li><a href="/en/mobile/customer/create-payment?provider=upop&amp;id=256&amp;access_token=-7X46098YwMFQkd9q2SqUj7Ft7oXh92w" tabindex="-1">UnionPay</a></li></ul>
+</div>        <div class="media">
+            <div class="media-left">
+                <img class="media-object img-responsive"
+                     src="/mockserver/paris-new.jpg"
+                     alt="Paris City"
+                     title="Paris City">
+            </div>
+            <div class="media-body">
+                <h5 class="media-heading">France</h5>
+                <p>Paris City</p>
+                <p>2021-06-08 - 2021-06-08</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel-body">
+        <div id="w2" class="list-view">
+<div data-key="292">
+<ul class="media-list">
+    <li class="media product-item">
+
+        <div class="media-header">
+
+            <ul>
+                <li>
+                    <!---------------------- brand store logo ---------------------->
+                    <img src="/mockserver/chanel_logo.jpg" class="brand-logo">
+                </li>
+                                <li>
+                    <!---------------------- brand store google map location ---------------------->
+                    <!-- t is the map type ("m" map, "k" satellite, "h" hybrid, "p" terrain, "e" GoogleEarth) -->
+                    <!-- q is the search query, if it is prefixed by loc: then google assumes it is a lat lon separated by a + -->
+                    <a href="http://maps.google.com/maps?t=m&q=loc:48.2097013+16.36861190000002" class="btn btn-link"  target="_blank">
+                        <i class="shopeur-icon icon-shopeur-location"></i>
+                    </a>
+                </li>
+                                <li>
+                    <!---------------------- wechat ---------------------->
+                    <a href="#" class="btn btn-link" onclick='shareHandler(event, {"id":292,"code":"88888","brand_id":15,"user_trip_id":256,"category_id":21,"color_id":1,"image_file":"/mockserver/Product-92A774B90455FB86-image.jpg","size":"xl","created_at":"2017-08-19 03:29:34","updated_at":"2017-08-19 03:29:34","status":0,"name_id":"Product-92A774B90455FB86","destination_id":58})'>
+                        <i class="shopeur-icon icon-shopeur-wechat"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <hr>
+        </div>
+
+        <div class="media-left">
+            <img class="media-object img-responsive" src="/mockserver/Product-92A774B90455FB86-image.jpg">
+        </div>
+
+        <div class="media-body">
+            <h6 class="media-heading">
+                Chanel            </h6>
+            <p>
+                                    Blouses & Tops                            </p>
+            <p>
+                                    <label> > </label>
+                    xl                            </p>
+            <p>
+                                    <i class="icon ion-ios-barcode"></i>
+                    88888                            </p>
+            <!--<p>
+                <span class="label label-primary"><?/*= $model->getStatusLabel() */?></span>
+            </p>-->
+        </div>
+
+    </li>
+</ul>
+</div>
+</div>    </div>
+</div>
+
+<hr>
+</div>
+
+<script src="/mockserver/jquery.js"></script>
+<script src="/mockserver/bootstrap.js"></script>
+<script src="/mockserver/yii.js"></script>
+<script type="text/javascript">jQuery(document).ready(function () {
+jQuery('#w0').button();
+});</script></body>
+</html>
