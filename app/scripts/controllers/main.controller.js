@@ -445,7 +445,8 @@
                 vm.templateUrl = 'templates/loading/alipay.html';
                 iabTitle = 'PAYMENT';
             } else {
-                vm.url = $sce.trustAsResourceUrl(ApiService.baseApiUrl() + '/en/mobile/customer?access_token=' + token);
+                // vm.url = $sce.trustAsResourceUrl(ApiService.baseApiUrl() + '/en/mobile/customer?access_token=' + token);
+                vm.url = 'mockserver/customer.html';
                 vm.templateUrl = 'templates/loading/request.html';
                 iabTitle = 'PRE-ORDERS';
             }

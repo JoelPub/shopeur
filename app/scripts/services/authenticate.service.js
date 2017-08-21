@@ -85,8 +85,8 @@
 
             var _serverResponse;
 
-            ApiService.post('api/v1/login', credentials, {sendToken: false})
-            // ApiService.get('gM5XMd/c7cb4af3b65465704b6e62652389e16222ff38b6/files/snippet.json', credentials, {sendToken: false})
+            // ApiService.post('api/v1/login', credentials, {sendToken: false})
+            ApiService.get('gM5XMd/c7cb4af3b65465704b6e62652389e16222ff38b6/files/snippet.json', credentials, {sendToken: false})
                 .then(function (response) {
                     console.info('Login success => ', response);
                     _serverResponse = response;

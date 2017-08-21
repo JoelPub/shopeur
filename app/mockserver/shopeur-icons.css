@@ -1,10 +1,10 @@
 @font-face {
   font-family: "shopeurIconFont";
-  src: url('../shopeurIconFont.eot');
-  src: url('../shopeurIconFont.eot?#iefix') format('eot'),
-    url('../shopeurIconFont.woff') format('woff'),
-    url('../shopeurIconFont.ttf') format('truetype'),
-    url('../shopeurIconFont.svg#shopeurIconFont') format('svg');
+  src: url('../mockserver/shopeurIconFont.eot');
+  src: url('../mockserver/shopeurIconFont.eot?#iefix') format('eot'),
+    url('../mockserver/shopeurIconFont.woff') format('woff'),
+    url('../mockserver/shopeurIconFont.ttf') format('truetype'),
+    url('../mockserver/shopeurIconFont.svg#shopeurIconFont') format('svg');
 }
 
 .shopeur-icon:before {
