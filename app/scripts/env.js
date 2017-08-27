@@ -17,6 +17,8 @@ var env = {
     // couchDBHost: 'https://couchdb.shopeur.com.staging-2.oneba.se',
     couchDBHost: 'https://couchdb.cloudno.de',
     couchDBPort: null,
+    // couchDBHost: 'http://127.0.0.1',
+    // couchDBPort: 5984,
     couchDBName: 'shopeur'
     // couchDBName: '7RaL5a/9584bfd3446b4f67ea65294636eb0df73197b5f2/files/snippet.json'
 };
